@@ -1,0 +1,540 @@
+<!-- GET https://h5.if.qidian.com/Atom.axd/Web/CheckIn/UserCheckInV2 HTTP/1.1
+Host: h5.if.qidian.com
+Connection: keep-alive
+Cache-Control: max-age=0
+User-Agent: Mozilla/5.0 (Linux; Android 7.0; Redmi Note 4X Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/57.0.2987.132 MQQBrowser/6.2 TBS/043909 Mobile Safari/537.36 QDJSSDK/1.0  QDReaderAndroid/6.9.8/323/1000014/865029033511463
+qdinfo: Oj6HKWBh/jxpIbnAyxjL064N6BJUmznq95FsJGt5iNZPBNPannwVsibny0HnagWg94LWPkd84/MNMRZOs2+JBV+ImnJoyUkrRL2exb7tFwnk0alnpn1RJQSWvZUTvEnqKc0BI9m8wGduYetO4KrWV87oLyVKn29V
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,en-US;q=0.8
+Cookie: loginType=4; _csrfToken=hM7oUo8UAPa0XabmnxuE0hU6qfgfNVhc3D7GhduF; JSESSIONID=1EA434F8CB2D7EDF0A01F31833CF28EB; QDHeader_Cookie=2K5XdFr0BpV9tGUnvx4OoqtJynvq46DjHR4LSbXKuT1p9KNxLQv4lQ2Soh8lK1iMB4RrUBtGTiNK8Sfca5F3EWn0o3EtC/iV+iLU4vyC0Ow=; cmfuToken=N((j7i2KWPUkKB7jQ7-dbn88LCO-d5LCAJGfAlp9Qw_Ta3K2gzlG3UEiiw8qhFNf4vaa5U6urILxiTmNsQ4G1Ouau_gctZkm0vMh5SVQSE8pVwiSk2smz-bE2ZTOVpQXYuNkoQHPzG8JevvcSWf_qTzK5W3jU-SvqXIZetLa7gmsmRLwLGFGbAFJmBRc7yX9jDZgVAG7qrRnYs1YR1z0_sCNmjYBp4vWpQOHz1ikGv9x9AcUElV-FtUGeYC1T586RYZgKYuG8P6i7xz4XnfvqLzqUnQuf31qkd8YoFGVYrsGdg1; QDInfo=Oj6HKWBh/jxpIbnAyxjL064N6BJUmznq95FsJGt5iNZPBNPannwVsibny0HnagWg94LWPkd84/MNMRZOs2+JBV+ImnJoyUkrRL2exb7tFwnk0alnpn1RJQSWvZUTvEnqzrEYXVd6v29hRtsVRVL9MAygnkj2prvT; ywkey=ywmrjSx4MFgn; ywguid=854015629172; appId=12; areaId=30; lang=cn
+
+
+HTTP/1.1 200 OK
+Server: nginx
+Date: Sat, 24 Mar 2018 07:35:58 GMT
+Content-Type: text/html;charset=UTF-8
+Connection: keep-alive
+via-qds: MTAuMjQyLjYuMjIw
+Set-Cookie: QDHeader_Cookie=2K5XdFr0BpV9tGUnvx4OoqtJynvq46DjHR4LSbXKuT1p9KNxLQv4lQ2Soh8lK1iMB4RrUBtGTiNK8Sfca5F3EWn0o3EtC/iV+iLU4vyC0Ow=; Expires=Sat, 24-Mar-2018 08:05:58 GMT; Path=/
+Cache-Control: max-age=0, no-cache
+Set-Cookie: JSESSIONID=0EF4215C89D2628A29F5B5AD4F1B6EB4; Path=/; HttpOnly
+Content-Language: zh-CN
+Content-Length: 21941
+
+
+
+ -->
+<html>
+<head>
+    <meta charset="utf8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta HTTP-EQUIV="pragma" CONTENT="no-cache">
+    <meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
+    <meta HTTP-EQUIV="expires" CONTENT="0">
+    <title>每日签到</title>
+    <link rel="stylesheet" href="/Content/checkIn/css/style.css?220171018">
+    <script>
+        var item = sessionStorage.getItem("checkIn_Index");
+        if (item) {
+            sessionStorage.removeItem("checkIn_Index");
+            location.reload();
+        }
+        var ___pop_ad_url='';
+        var ___center_ad_url1='';
+        var ___center_ad_url2='';
+        /* 根据窗口宽度自动计算html基准字体大小，用于移动端弹性布局 */
+        (function () {
+            var docEl = document.documentElement,
+                    docBody = document.body,
+                    baseFontSize = 100,
+                    pageMaxWidth = 750,
+                    rootHtml = document.getElementsByTagName('html')[0],
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = clientWidth = docEl.clientWidth || docBody.clientWidht;
+
+                        //最大宽度显示为750的宽度
+                        if (clientWidth > pageMaxWidth) {
+                            clientWidth = pageMaxWidth
+                        }
+
+                        if (!clientWidth) return;
+                        rootHtml.style.fontSize = baseFontSize * (clientWidth / 1080) + 'px';
+                    };
+            if (!window.addEventListener) return;
+            window.addEventListener(resizeEvt, recalc, false);
+            recalc();
+        })();
+    </script>
+
+</head>
+<body>
+
+
+    <script type="text/javascript">
+        ___pop_ad_url='QDReader://apps.qidian.com/fansTeam';
+    </script>
+    <input id="hid_ad" type="hidden" value="" data-img="https://qidian.qpic.cn/qidian_common/349573/c141cc9eeee5ec35075c88d5a0a88329/0"
+           data-name="疯狂打Call，送作家上闪屏！"/>
+
+<input type="hidden" id="hid_enough" value="1"/>
+ <input type="hidden" id="hid_userId" value="307105359"/>
+<div class="wrapper" id="wrapper">
+    <div class="page-loadding" id="pop_loading" style="display: none;"></div>
+
+
+    <div class="pop tc dn" id="pop">
+        <div class="mask"></div>
+        <div class="pop-conatinter">
+            <div class="pop-box rel" data-type="">
+                <div class="pop-close dn dialog-close">
+                    <span class="pop-close-left"></span>
+                    <span class="pop-close-right"></span>
+                </div>
+                <div class="pop-icon"></div>
+                <div class="pop-title"></div>
+                <div class="pop-content"></div>
+                <div class="pop-footer ovh">
+                    <a class="btn right-btn dialog-close" style="display: inline-block;float: none;"
+                       href="javascript:;">我知道了</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--礼包领取成功-->
+    <div class="pop tc dn" id="pop_pack">
+        <div class="mask"></div>
+        <div class="pop-conatinter">
+            <div class="pop-box rel" data-type="alert">
+                <div class="pop-close dialog-close">
+                    <span class="pop-close-left"></span>
+                    <span class="pop-close-right"></span>
+                </div>
+                <div class="pop-icon"></div>
+                <div class="pop-title">
+                    <div class="text-title">领取成功</div>
+                </div>
+                <div class="pop-content">
+                    <div class="gift-show tc">
+
+                    </div>
+                    <div class="gift-detail">明日可领15点+15经验值+1次抽奖机会</div>
+                </div>
+                <div class="pop-footer ovh">
+                    <a class="btn right-btn dialog-close" data-click="closePop" title="" href="javascript:;">我知道了</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--抽奖成功-->
+    <div class="pop tc dn" id="pop_lottery">
+        <div class="mask"></div>
+        <div class="pop-conatinter">
+            <div class="pop-box rel" data-type="gift-confirm">
+                <div class="pop-close dn dialog-close">
+                    <span class="pop-close-left"></span>
+                    <span class="pop-close-right"></span>
+                </div>
+                <div class="pop-icon">
+                    <div class="gift-icon" data-icon="gift-dian">
+                        <div class="gift-title-icon"></div>
+                    </div>
+                </div>
+                <div class="pop-title">
+                    <div class="gift-title">点 x<span class="gift-value">5</span></div>
+                     <div class="gift-gt dn">(24小时内有效)</span></div>
+                </div>
+                <div class="pop-content">
+                    <img class="wp100 mt5" src="">
+                    <div class="ad-detail">书荒大作战起点起点与你来帮嗨！</div>
+                </div>
+                <div class="pop-footer ovh">
+                    <a class="btn left-btn dialog-close" href="javascript:;">关闭</a>
+                    <a class="btn right-btn" id="go_ad" href="javascript:;">去看看</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--签到成功 -->
+    <div class="pop tc dn" id="pop_checkIn">
+        <div class="mask"></div>
+        <div class="pop-conatinter">
+            <div class="pop-box rel" data-type="confirm">
+                <div class="pop-close dialog-close">
+                    <span class="pop-close-left"></span>
+                    <span class="pop-close-right"></span>
+                </div>
+                <div class="pop-icon"></div>
+                <div class="pop-title">
+                    <div class="text-title">签到成功</div>
+                </div>
+                <div class="pop-content">
+                    <div class="gift-show tc">
+                        <!--显示奖励信息-->
+                    </div>
+                    <div class="gift-detail" id="checkIn-tips">
+                        
+                            
+                            
+                                每日签到领更多，还有连签礼包拿！
+                            
+                        
+                        </div>
+                </div>
+                <div class="pop-footer ovh">
+                    <a class="btn left-btn dialog-close" href="javascript:;">关闭</a>
+                    <a class="btn right-btn" href="javascript:;" onclick="scrollTo(0,0);Index.doLottery(14)">抽奖</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--购买补签-->
+    <div class="pop tc dn" id="pop_pay">
+        <div class="mask"></div>
+        <div class="pop-conatinter">
+            <div class="pop-box rel" data-type="confirm">
+                <div class="pop-close dialog-close">
+                    <span class="pop-close-left"></span>
+                    <span class="pop-close-right"></span>
+                </div>
+                <div class="pop-icon"></div>
+                <div class="pop-title">
+                    <div class="text-title">确认购买补签机会</div>
+                </div>
+                <div class="pop-content">
+                    <div class="gift-detail" style="font-size: .45rem;">补签机会：<span
+                            style="color:#D43C33">99</span>点
+                    </div>
+                </div>
+                <div class="pop-footer ovh">
+                    <a class="btn left-btn dialog-close" href="javascript:;">关闭</a>
+                    <a class="btn right-btn" href="javascript:;" onclick="Index.confirmRecheckIn()">购买</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--余额不足-->
+    <div class="pop tc dn" id="pop_notEnough">
+        <div class="mask"></div>
+        <div class="pop-conatinter">
+            <div class="pop-box rel" data-type="confirm">
+                <div class="pop-close dialog-close">
+                    <span class="pop-close-left"></span>
+                    <span class="pop-close-right"></span>
+                </div>
+                <div class="pop-icon"></div>
+                <div class="pop-title">
+                    <div class="text-title" style="font-size: .5rem;">余额不足,请充值</div>
+                </div>
+                <div class="pop-content" style="padding-left: 20%;padding-right: 20%;">iOS与安卓客户端的充值金额互不通用</div>
+                <div class="pop-footer ovh">
+                    <a class="btn left-btn dialog-close" href="javascript:;">关闭</a>
+                    <a class="btn right-btn" href="javascript:;" onclick="Index.goRecharge()">充值</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="browser-open" id="openBrowser">
+        <div class="browser-label">
+            请在浏览器中打开本页面
+            <img src="/Content/checkIn/images/browser-guidearrow.png"/>
+        </div>
+        <div class="browser-step">
+            <img class="step-img-1" src="/Content/checkIn/images/browser-step-1.png"/>
+            <img class="step-arrow" src="/Content/checkIn/images/browser-step-arrow.png"/>
+            <img class="step-img-2" src="/Content/checkIn/images/browser-step-2.png"/>
+        </div>
+        <div class="browser-content">
+            <div class="browser-label1">
+                <p class="p-left">第1步</p>
+                <p class="p-right">第2步</p>
+            </div>
+            <div class="browser-text">
+                <p class="p-left">点击右上角<br/>[更多]按钮</p>
+                <p class="p-right">选择用浏览器打开</p>
+            </div>
+        </div>
+    </div>
+    <div class="index-header rel">
+        <div id="btn_checkIn" class="index-btn active"
+             onclick="Index.checkIn()"></div>
+        <div class="number-area ovh ">
+            
+                <span id="noBreakTimes" data-count="0001"
+                      class="number l tc rel">0</span>
+                <span class="number l tc rel">0</span>
+                <span class="number l tc rel">0</span>
+                <span class="number l tc rel">1</span>
+            
+        </div>
+        <div class="index-text tc">累计签到<span id="indexNumber">4</span>天</div>
+    </div>
+    
+    <div class="part1">
+        <ul class="gift-items ovh tc" id="lottery_items">
+            <!--头图的显示内容，与data-icon的值有关，data-id为该条奖品的id，会在抽奖时，根据该id，来做中奖状态-->
+            
+                <li class="gift-item l  active  " data-prizeid="1"
+                    style="background-image: url(/Content/checkIn/images/gift-dian-max.png);" data-imageurl="/Content/checkIn/images/gift-dian-max.png"
+                    data-type="1" data-count="500">
+                        500点
+                </li>
+            
+                <li class="gift-item l " data-prizeid="2"
+                    style="background-image: url(/Content/checkIn/images/gift-dian.png);" data-imageurl="/Content/checkIn/images/gift-dian.png"
+                    data-type="1" data-count="10">
+                        10点
+                </li>
+            
+                <li class="gift-item l " data-prizeid="3"
+                    style="background-image: url(/Content/checkIn/images/gift-jingyan.png);" data-imageurl="/Content/checkIn/images/gift-jingyan.png"
+                    data-type="2" data-count="50">
+                        50经验值
+                </li>
+            
+                <li class="gift-item l " data-prizeid="4"
+                    style="background-image: url(/Content/checkIn/images/gift-game.png);" data-imageurl="/Content/checkIn/images/gift-game.png"
+                    data-type="4" data-count="1">
+                        游戏赠券
+                </li>
+            
+                <li class="gift-item l " data-prizeid="5"
+                    style="background-image: url(/Content/checkIn/images/gift-dian.png);" data-imageurl="/Content/checkIn/images/gift-dian.png"
+                    data-type="1" data-count="5">
+                        5点
+                </li>
+            
+                <li class="gift-item l " data-prizeid="6"
+                    style="background-image: url(/Content/checkIn/images/gift-jingyan.png);" data-imageurl="/Content/checkIn/images/gift-jingyan.png"
+                    data-type="2" data-count="5">
+                        5经验值
+                </li>
+            
+                <li class="gift-item l " data-prizeid="7"
+                    style="background-image: url(/Content/checkIn/images/gift-jifen.png);" data-imageurl="/Content/checkIn/images/gift-jifen.png"
+                    data-type="3" data-count="100">
+                        100积分
+                </li>
+            
+                <li class="gift-item l " data-prizeid="8"
+                    style="background-image: url(/Content/checkIn/images/gift-jingyan.png);" data-imageurl="/Content/checkIn/images/gift-jingyan.png"
+                    data-type="2" data-count="10">
+                        10经验值
+                </li>
+            
+        </ul>
+        <div class="btn tc"
+             data-lotterytimes="0" id="doLottery" onclick="Index.doLottery(5)">抽奖
+        </div>
+    </div>
+    
+    
+        <script type="text/javascript">
+            ___center_ad_url1='QDReader://sy.qidian.com/api/syxs/sgame/Channel.php?ishttps=false&channel=3001&type=2&gameid=200696&returnUrl=http%3A%2F%2Fsy.qidian.com%2Fapi%2Fsyxs%2Fsgame%2Fbegin.php%3Fgameid%3D200696%26ty%3D0%26partnerid%3D3001%26linkid%3D303074';
+            ___center_ad_url2='QDReader://app/openPunctualRedPacket';
+        </script>
+    <div class="line"></div>
+    <div class="part2">
+        <div class="title">赢更多超值好礼：</div>
+        <div class="recommend ovh">
+            <!--如果是在客户端跳转的话，href的协议要变成：QDReader://activity.qidian.com/2016/58192489-->
+            <a class="recommend-item l" href="javascript:;"
+               style="background-image:url(https://qidian.qpic.cn/qidian_common/349573/c50dc466d874c35296391cadd90a76be/0)"  onclick="Index.goAdUrl(6,___center_ad_url1)"></a>
+            <a class="recommend-item r"  href="javascript:;"
+               style="background-image:url(https://qidian.qpic.cn/qidian_common/349573/d846b440ec50ee0f91cf9c8daeab0d1b/0)" onclick="Index.goAdUrl(7,___center_ad_url2)"></a>
+        </div>
+    </div>
+    
+    
+    <div class="line"></div>
+
+    <div class="part3 ovh" data-lowerlimit="3">
+        <a class="more-link r" href="javascript:;" onclick="Index.goPackList(8)">查看更多</a>
+        
+            
+                <div class="title">距下一个礼包还有2天</div>
+            
+            
+            
+        
+        <div class="gift-control rel" data-packtype="3" data-coin="5"
+             data-exp="5" data-lotterytimes="0">
+            
+                
+                    <div class="btn tc nonRecieve" onclick="Index.recievePack(this)">未领取</div>
+                
+                
+                
+            
+            <div class="name">连签3天</div>
+            <div class="detail">5点+5经验值</div>
+        </div>
+    </div>
+    
+    
+    <div class="line"></div>
+    <div class="part4 tc">
+        <div class="title">补签</div>
+        <!--IOS设设备，提示该句-->
+        <div class="detail">漏签的同学可以购买补签机会哦</div>
+        <ul class="remark-items ovh" id="reCheckInList">
+            <!--已签到的日期，需要添加active的class，data-url=""为补签时的ajax请求地址-->
+            
+                <!--除今日外所有未签到的天数可以补签-->
+                
+                    
+                        <li onclick="Index.reCheckIn(this)"
+                            class="remark-item l rel "
+                            data-checkindate="20180318"
+                            data-hascheckin="false">
+                            <div class="latest-detial"><span
+                                    class="month">3</span>/18</div>
+                        </li>
+                    
+                    
+                
+
+
+            
+                <!--除今日外所有未签到的天数可以补签-->
+                
+                    
+                        <li onclick="Index.reCheckIn(this)"
+                            class="remark-item l rel "
+                            data-checkindate="20180319"
+                            data-hascheckin="false">
+                            <div class="latest-detial"><span
+                                    class="month">3</span>/19</div>
+                        </li>
+                    
+                    
+                
+
+
+            
+                <!--除今日外所有未签到的天数可以补签-->
+                
+                    
+                        <li onclick="Index.reCheckIn(this)"
+                            class="remark-item l rel "
+                            data-checkindate="20180320"
+                            data-hascheckin="false">
+                            <div class="latest-detial"><span
+                                    class="month">3</span>/20</div>
+                        </li>
+                    
+                    
+                
+
+
+            
+                <!--除今日外所有未签到的天数可以补签-->
+                
+                    
+                        <li onclick="Index.reCheckIn(this)"
+                            class="remark-item l rel "
+                            data-checkindate="20180321"
+                            data-hascheckin="false">
+                            <div class="latest-detial"><span
+                                    class="month">3</span>/21</div>
+                        </li>
+                    
+                    
+                
+
+
+            
+                <!--除今日外所有未签到的天数可以补签-->
+                
+                    
+                        <li onclick="Index.reCheckIn(this)"
+                            class="remark-item l rel "
+                            data-checkindate="20180322"
+                            data-hascheckin="false">
+                            <div class="latest-detial"><span
+                                    class="month">3</span>/22</div>
+                        </li>
+                    
+                    
+                
+
+
+            
+                <!--除今日外所有未签到的天数可以补签-->
+                
+                    
+                        <li onclick="Index.reCheckIn(this)"
+                            class="remark-item l rel "
+                            data-checkindate="20180323"
+                            data-hascheckin="false">
+                            <div class="latest-detial"><span
+                                    class="month">3</span>/23</div>
+                        </li>
+                    
+                    
+                
+
+
+            
+                <!--除今日外所有未签到的天数可以补签-->
+                
+                    
+                    
+                        <li class="remark-item l rel active" id="current_day"
+                            
+                            data-checkindate="20180324"
+                            data-hascheckin="true">
+                            <div class="latest-detial" style="top:35%;"><span
+                                    class="month" style="font-size:.55rem;color:#d43c33;">今日</span></div>
+                        </li>
+                    
+                
+
+
+            
+            <li class="remark-item l remark-last rel">
+                <div class="latest-detial">可补签前6天</div>
+            </li>
+        </ul>
+    </div>
+    
+
+    <div class="line" id="part5_seperator" style="display: none;"></div>
+    <div class="part5 rel" id="part5_ios" style="display: none;">
+        <!--自动推送，在data-url之外，我会添加一个额外的参数，表示要修改的状态，关闭时，status=0,打开时，status=1,-->
+        <div onclick="Index.addOrRemoveTimer(this)" class="btn"></div>
+        <div class="title">每日签到提醒</div>
+        <div class="detail">若当日未签到，21点提醒我</div>
+    </div>
+    <div class="part5 rel" id="part5_android" style="display: none;">
+        <div onclick="Index.addOrRemoveTimer(this)" class="btn android"
+             data-click="tuisong"></div>
+        <div class="title">每日签到提醒</div>
+        <div class="detail">若当日未签到，21点提醒我</div>
+    </div>
+    <div class="line"></div>
+    <div style="text-align: center;background-color: #eee; padding-bottom: 2%;margin-top:-3%;display:none;" id="hid_rule">
+        <a style="display: inline-block;color: #D43C33; text-decoration: underline;" href="CheckInRule">查看规则</a>
+    </div>
+    </div>
+    <a name="footer"></a>
+</body>
+<script src="/Scripts/jquery-2.1.3.min.js?20171018"></script>
+<script src="/Scripts/Common/JSHelper.0.9.js?201710183"></script>
+<script src="/Content/checkIn/js/index.js?4201710189"></script>
+<script>
+    var _mtac = {};
+    (function() {
+        var mta = document.createElement("script");
+        mta.src = "https://pingjs.qq.com/h5/stats.js?v2.0.2";
+        mta.setAttribute("name", "MTAH5");
+        mta.setAttribute("sid", "500518982");
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(mta, s);
+    })();
+</script>
+</html>
+
