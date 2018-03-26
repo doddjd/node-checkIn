@@ -27,10 +27,10 @@ var qidianCheck = (input) => {
                 date: moment().format('YYYY-MM-DD'),
                 innerHtml: `<p>起点打卡结果${res.data.Message};</p>`
             }
-            if (res.data.Result == 0&&res.data.Result == 1001) {
+            if (res.data.Result == 0||res.data.Result == 1001) {
                 // Result为0时为当天首次打卡，1001为之后打卡但请求成功
                 console.log('qidian check ok');
-                setTimeout(resolve, 5000, res.input);
+                setTimeout(resolve, 5000, input);
             } else {
                 reject(input)
             }
