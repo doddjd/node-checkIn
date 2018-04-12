@@ -73,7 +73,7 @@ var qidianCheckInLottery = (input) => {
 function qiDianChecking() {
     startPromise().then(qidianCheck)
         .then(qidianCheckInLottery)
-        .then(sendMail)
+        // .then(sendMail)
         .catch(sendMail)
 }
 
